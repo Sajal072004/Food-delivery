@@ -61,7 +61,7 @@ const verifyOrder = async (req, res) => {
   const { orderId, success } = req.body;
 
   try {
-    if (success == "true") {
+    if (success === "true") {
       await orderModel.findByIdAndUpdate(orderId, { payment: true });
       return res.json({ success: true, message: "Paid" });
     } else {
