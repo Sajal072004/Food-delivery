@@ -50,9 +50,7 @@ const PlaceOrder = () => {
       if( response.data.success) {
           const {session_url} = response.data;
           window.location.replace(session_url);
-        setTimeout( () => {
-          window.location.replace("https://food-delivery-frontend-no0l.onrender.com/");
-        },5000)
+        navigate("/");
          
       }
       else {
