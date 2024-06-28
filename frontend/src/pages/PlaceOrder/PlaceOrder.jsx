@@ -59,12 +59,12 @@ const PlaceOrder = () => {
 
   }
 
-  useEffect( ()=> {
-    if(window.location.href.startsWith("food-delivery-frontend-no0l.onrender.com/verify?success")){
+  useEffect(() => {
+    if (window.location.href.startsWith("https://food-delivery-frontend-no0l.onrender.com/verify?success")) {
       alert("Payment Successful! Check your orders section");
       window.location.href = "https://food-delivery-frontend-no0l.onrender.com/";
     }
-  },[])
+  }, []);
 
   const navigate = useNavigate();
 
