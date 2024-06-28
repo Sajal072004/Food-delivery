@@ -4,6 +4,7 @@ import "./verify.css";
 
 const Verify = () => {
   const navigate = useNavigate();
+  navigate("/");
 
   useEffect(() => {
     // Directly navigate to /myorders without any verification
