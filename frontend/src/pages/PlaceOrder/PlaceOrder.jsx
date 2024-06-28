@@ -67,6 +67,12 @@ const PlaceOrder = () => {
 
   }
 
+  useEffect( ()=> {
+    if (window.location.href.startsWith('https://food-delivery-frontend-no0l.onrender.com/verify?success')) {
+    window.location.replace('https://food-delivery-frontend-no0l.onrender.com/');
+}
+  },[])
+
   
 const navigate = useNavigate();
   useEffect( ()=> {
