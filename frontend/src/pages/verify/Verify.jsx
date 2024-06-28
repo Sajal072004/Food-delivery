@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import "./verify.css";
 
 const Verify = () => {
   const navigate = useNavigate();
-  navigate("/");
+  const [searchParams] = useSearchParams();
+  const success = searchParams.get("success");
+  const orderId = searchParams.get("orderId");
 
   useEffect(() => {
-    // Directly navigate to /myorders without any verification
-    navigate("/myorders");
-  }, [navigate]);
+    if (success === "true" && orderId) {
+      navigate("/myorders");
+    } else {
+      navigate("/");
+    }
+  }, [navigate, success, orderId]);
 
   return (
     <div className='verify'>
