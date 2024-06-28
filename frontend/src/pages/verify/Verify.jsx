@@ -9,6 +9,8 @@ const Verify = () => {
   const orderId = searchParams.get("orderId");
 
   useEffect(() => {
+    alert('Verify component mounted'); // Add this line to confirm component mount
+
     if (success === "true" && orderId) {
       navigate("/myorders");
     } else {
