@@ -44,20 +44,12 @@ const PlaceOrder = () => {
         items : orderItems,
         amount : getTotalCartAmount() +2,
       }
-      
+
       let response = await axios.post(url + "/api/order/place" , orderData , {headers:{token}});
 
       if( response.data.success) {
           const {session_url} = response.data;
-          console.log(session_url);
           window.location.replace(session_url);
-        
-
-        
-        
-          
-        
-         
       }
       else {
         alert("Error");
@@ -67,14 +59,8 @@ const PlaceOrder = () => {
 
   }
 
-//   useEffect( ()=> {
-//     if (window.location.href.startsWith('https://food-delivery-frontend-no0l.onrender.com/verify?success')) {
-//     window.location.replace('https://food-delivery-frontend-no0l.onrender.com/');
-// }
-//   },[window.location.href])
+  const navigate = useNavigate();
 
-  
-const navigate = useNavigate();
   useEffect( ()=> {
     if( !token){
       alert("Please login to continue");
@@ -84,7 +70,6 @@ const navigate = useNavigate();
       alert("Your Cart is Empty. Please Order Something to proceed")
       navigate("/cart");
     }
-    else navigate("/")
     
   },[token])
 
