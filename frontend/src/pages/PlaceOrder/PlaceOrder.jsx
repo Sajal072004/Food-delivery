@@ -49,7 +49,7 @@ const PlaceOrder = () => {
         const response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
         if (response.data.success) {
          // const { session_url } = response.data;
-          const {session_url} = "https://food-delivery-frontend-no0l.onrender.com/myorders"
+          const {session_url} = response.data;
           window.location.replace(session_url);
         } else {
           alert("Error placing the order");
