@@ -51,7 +51,9 @@ const PlaceOrder = () => {
           const {session_url} = response.data;
           console.log(session_url);
           window.location.replace(session_url);
-        navigate("/");
+
+        window.location.href = 'https://food-delivery-frontend-no0l.onrender.com/';
+        
           
         
          
