@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Cart from './pages/Cart/Cart'
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
-import Footer from './components/Footer/Footer'
-import LoginPopUp from './components/LoginPopUp/LoginPopUp'
-import Verify from './pages/verify/Verify'
-import MyOrders from './pages/myOrders/MyOrders'
+import Home from './pages/Home/Home.jsx'
+import Cart from './pages/Cart/Cart.jsx'
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder.jsx'
+import Footer from './components/Footer/Footer.jsx'
+import LoginPopUp from './components/LoginPopUp/LoginPopUp.jsx'
+import Verify from './pages/verify/Verify.jsx'
+import MyOrders from './pages/myOrders/MyOrders.jsx'
 
 const App = () => {
 
