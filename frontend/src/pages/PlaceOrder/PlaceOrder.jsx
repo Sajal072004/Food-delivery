@@ -53,7 +53,7 @@ const navigate = useNavigate();
           // const { session_url } = response.data;
           const {session_url} = "response.data";
           window.location.replace(session_url);
-          navigate("/");
+          
           
         } else {
           alert("Error placing the order");
