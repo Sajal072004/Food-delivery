@@ -61,7 +61,7 @@ const PlaceOrder = () => {
 
       
 
-  }
+  
 
   const navigate = useNavigate();
 
