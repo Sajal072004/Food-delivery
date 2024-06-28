@@ -33,13 +33,7 @@ app.use("/api/user" , userRouter);
 app.use("/api/cart"  , cartRouter);
 app.use("/api/order" , orderRouter);
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "dist/index.html"), function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
-});
+
 
 app.get("/" , (req , res) => {
   res.send("api working")
