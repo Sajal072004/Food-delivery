@@ -59,12 +59,7 @@ const PlaceOrder = () => {
 
   }
 
-  useEffect(() => {
-    if (window.location.href.startsWith("https://food-delivery-frontend-no0l.onrender.com/verify?success")) {
-      alert("Payment Successful! Check your orders section");
-      window.location.href = "https://food-delivery-frontend-no0l.onrender.com/";
-    }
-  }, []);
+  
 
   const navigate = useNavigate();
 
@@ -79,6 +74,18 @@ const PlaceOrder = () => {
     }
     
   },[token])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (window.location.href.startsWith("https://food-delivery-frontend-no0l.onrender.com/verify?success")) {
+        clearInterval(interval); // Stop checking once condition is met
+        alert("Payment Successful! Check your orders section.");
+        window.location.href = "https://food-delivery-frontend-no0l.onrender.com/";
+      }
+    }, 1000); // Check every second (adjust interval as needed)
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
 
   
   
