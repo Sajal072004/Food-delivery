@@ -45,11 +45,14 @@ const PlaceOrder = () => {
         amount : getTotalCartAmount() +2,
       }
 
+      const navigate = useNavigate();
+
       let response = await axios.post(url + "/api/order/place" , orderData , {headers:{token}});
 
       if( response.data.success) {
           const {session_url} = response.data;
           window.location.replace(session_url);
+        navigate("/")
       }
       else {
         alert("Error");
@@ -59,8 +62,7 @@ const PlaceOrder = () => {
 
   }
 
-  const navigate = useNavigate();
-
+  
   useEffect( ()=> {
     if( !token){
       alert("Please login to continue");
