@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
 
-  const url = "https://food-delivery-backend-nhg5.onrender.com";
+  const url = "https://food-delivery-sepia-chi.vercel.app/";
 
 
   return (
